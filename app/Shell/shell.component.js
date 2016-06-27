@@ -12,24 +12,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by tahirhsn on 6/27/2016.
  */
 var core_1 = require('@angular/core');
-//import { ToDo } from '../core/entities/toDo.entity'
-//import { ToDoList } from '../core/constant/toDoList.constant'
-var ToDo = (function () {
-    function ToDo() {
-    }
-    return ToDo;
-}());
-exports.ToDo = ToDo;
-var ToDoList = [
-    { 'value': 'item1', 'done': false },
-    { 'value': 'item2', 'done': false }
-];
+var shell_service_1 = require('./shell.service');
 var shell = (function () {
-    function shell() {
+    function shell(shellService) {
+        this.shellService = shellService;
         this.title = 'ToDo List';
-        this.toDoList = ToDoList;
-        this.newItem = "";
+        this.toDoList = [];
+        this.newItem = '';
     }
+    shell.prototype.ngOnInit = function () {
+        //this.shellService.getToDoList().then(toDoList => this.toDoList = toDoList);
+        this.toDoList = this.shellService.getToDoList();
+    };
     shell.prototype.add = function () {
         this.toDoList.push({ "value": this.newItem });
         this.newItem = "";
@@ -49,9 +43,9 @@ var shell = (function () {
         core_1.Component({
             selector: 'shell',
             templateUrl: './app/shell/shell.html',
-            providers: [ToDoList]
+            providers: [shell_service_1.shellService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [shell_service_1.shellService])
     ], shell);
     return shell;
 }());

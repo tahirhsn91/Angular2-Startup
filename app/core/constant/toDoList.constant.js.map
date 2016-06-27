@@ -1,1 +1,1 @@
-{"version":3,"file":"toDoList.constant.js","sourceRoot":"","sources":["toDoList.constant.ts"],"names":[],"mappings":"AAAA,KAAK;AACL,sCAAsC;AACtC,KAAK;AACL,4CAA4C;AAC5C,gDAAgD;AAChD,EAAE;AACF,mCAAmC;AACnC,uCAAuC;AACvC,sCAAsC;AACtC,IAAI"}
+{"version":3,"file":"toDoList.constant.js","sourceRoot":"","sources":["toDoList.constant.ts"],"names":[],"mappings":";AAMW,gBAAQ,GAAW;IAC1B,EAAE,OAAO,EAAC,OAAO,EAAC,MAAM,EAAE,KAAK,EAAC;IAChC,EAAE,OAAO,EAAC,OAAO,EAAC,MAAM,EAAE,KAAK,EAAC;CACnC,CAAC"}
