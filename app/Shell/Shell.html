@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+    <ul>
+        <li *ngFor="let item of toDoList">
+        <span [class.done]="item.done">{{item.value}}</span>
+            <button (click)="remove(item)">Delete</button>
+            <button (click)="done(item)">Done</button>
+        </li>
+    </ul>
+    <input type="text" [(ngModel)]="newItem">
+    <button (click)="add()">Add</button>
+</body>
+</html>

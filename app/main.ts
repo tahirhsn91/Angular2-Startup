@@ -1,5 +1,6 @@
+///<reference path="../node_modules/@angular/platform-browser-dynamic/index.d.ts"/>
 import { bootstrap }    from '@angular/platform-browser-dynamic';
 
-import { AppComponent } from './app.component';
+import { shell } from './shell/shell.component';
 
-bootstrap(AppComponent);
+bootstrap(shell);
